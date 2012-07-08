@@ -1,0 +1,583 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name='FMDatabase'>
+<method selector='beginDeferredTransaction'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='beginTransaction'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method variadic='true' selector='boolForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='busyRetryTimeout'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='cachedStatements'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='changes'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='checkedOut'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='clearCachedStatements'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='close'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeOpenResultSets'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='columnExists:columnName:'>
+<arg declared_type='NSString*' name='tableName' index='0' type='@'/>
+<arg declared_type='NSString*' name='columnName' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='commit'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='crashOnErrors'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method variadic='true' selector='dataForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='databasePath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='databaseWithPath:'>
+<arg declared_type='NSString*' name='inPath' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method variadic='true' selector='dateForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method variadic='true' selector='doubleForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='double' type='d'/>
+</method>
+<method variadic='true' selector='executeQuery:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<retval declared_type='FMResultSet*' type='@'/>
+</method>
+<method selector='executeQuery:withArgumentsInArray:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<arg declared_type='NSArray*' name='arguments' index='1' type='@'/>
+<retval declared_type='FMResultSet*' type='@'/>
+</method>
+<method selector='executeQuery:withParameterDictionary:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<arg declared_type='NSDictionary*' name='arguments' index='1' type='@'/>
+<retval declared_type='FMResultSet*' type='@'/>
+</method>
+<method variadic='true' selector='executeQueryWithFormat:'>
+<arg declared_type='NSString*' name='format' index='0' type='@'/>
+<retval declared_type='FMResultSet*' type='@'/>
+</method>
+<method variadic='true' selector='executeUpdate:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='executeUpdate:withArgumentsInArray:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<arg declared_type='NSArray*' name='arguments' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='executeUpdate:withParameterDictionary:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<arg declared_type='NSDictionary*' name='arguments' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method variadic='true' selector='executeUpdateWithFormat:'>
+<arg declared_type='NSString*' name='format' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='getSchema'>
+<retval declared_type='FMResultSet*' type='@'/>
+</method>
+<method selector='getTableSchema:'>
+<arg declared_type='NSString*' name='tableName' index='0' type='@'/>
+<retval declared_type='FMResultSet*' type='@'/>
+</method>
+<method selector='goodConnection'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hadError'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hasOpenResultSets'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='inSavePoint:'>
+<arg declared_type='void (^)(BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='inTransaction'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithPath:'>
+<arg declared_type='NSString*' name='inPath' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method variadic='true' selector='intForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='int' type='i'/>
+</method>
+<method class_method='true' selector='isSQLiteThreadSafe'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastError'>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='lastErrorCode'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='lastErrorMessage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='lastInsertRowId'>
+<retval declared_type='sqlite_int64' type='q'/>
+</method>
+<method selector='logsErrors'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method variadic='true' selector='longForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='makeFunctionNamed:maximumArguments:withBlock:'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<arg declared_type='int' name='count' index='1' type='i'/>
+<arg declared_type='void (^)(sqlite3_context *, int, sqlite3_value **)' name='block' function_pointer='true' index='2' type='@?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='open'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openWithFlags:'>
+<arg declared_type='int' name='flags' index='0' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rekey:'>
+<arg declared_type='NSString*' name='key' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='releaseSavePointWithName:error:'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<arg declared_type='NSError**' name='outErr' index='1' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rollback'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rollbackToSavePointWithName:error:'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<arg declared_type='NSError**' name='outErr' index='1' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setBusyRetryTimeout:'>
+<arg declared_type='int' name='busyRetryTimeout' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCachedStatements:'>
+<arg declared_type='NSMutableDictionary*' name='cachedStatements' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCheckedOut:'>
+<arg declared_type='BOOL' name='checkedOut' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCrashOnErrors:'>
+<arg declared_type='BOOL' name='crashOnErrors' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setKey:'>
+<arg declared_type='NSString*' name='key' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setLogsErrors:'>
+<arg declared_type='BOOL' name='logsErrors' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldCacheStatements:'>
+<arg declared_type='BOOL' name='value' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTraceExecution:'>
+<arg declared_type='BOOL' name='traceExecution' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldCacheStatements'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sqliteHandle'>
+<retval declared_type='sqlite3*' type='^{sqlite3=}'/>
+</method>
+<method class_method='true' selector='sqliteLibVersion'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='startSavePointWithName:error:'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<arg declared_type='NSError**' name='outErr' index='1' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method variadic='true' selector='stringForQuery:'>
+<arg declared_type='NSString*' name='objs' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='tableExists:'>
+<arg declared_type='NSString*' name='tableName' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='traceExecution'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method variadic='true' selector='update:withErrorAndBindings:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<arg declared_type='NSError**' name='outErr' index='1' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='validateSQL:error:'>
+<arg declared_type='NSString*' name='sql' index='0' type='@'/>
+<arg declared_type='NSError**' name='error' index='1' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='FMDatabasePool'>
+<method selector='countOfCheckedInDatabases'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='countOfCheckedOutDatabases'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='countOfOpenDatabases'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method class_method='true' selector='databasePoolWithPath:'>
+<arg declared_type='NSString*' name='aPath' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='inDatabase:'>
+<arg declared_type='void (^)(FMDatabase *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inDeferredTransaction:'>
+<arg declared_type='void (^)(FMDatabase *, BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inSavePoint:'>
+<arg declared_type='void (^)(FMDatabase *, BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='inTransaction:'>
+<arg declared_type='void (^)(FMDatabase *, BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithPath:'>
+<arg declared_type='NSString*' name='aPath' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='maximumNumberOfDatabasesToCreate'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='path'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='releaseAllDatabases'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumNumberOfDatabasesToCreate:'>
+<arg declared_type='NSUInteger' name='maximumNumberOfDatabasesToCreate' index='0' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type='NSString*' name='path' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='FMDatabaseQueue'>
+<method selector='close'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='databaseQueueWithPath:'>
+<arg declared_type='NSString*' name='aPath' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='inDatabase:'>
+<arg declared_type='void (^)(FMDatabase *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inDeferredTransaction:'>
+<arg declared_type='void (^)(FMDatabase *, BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inSavePoint:'>
+<arg declared_type='void (^)(FMDatabase *, BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='inTransaction:'>
+<arg declared_type='void (^)(FMDatabase *, BOOL *)' name='block' function_pointer='true' index='0' type='@?'>
+<arg declared_type='FMDatabase*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithPath:'>
+<arg declared_type='NSString*' name='aPath' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='path'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type='NSString*' name='path' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='FMResultSet'>
+<method selector='UTF8StringForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='unsigned char*' const='true' type='*'/>
+</method>
+<method selector='UTF8StringForColumnName:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='unsigned char*' const='true' type='*'/>
+</method>
+<method selector='boolForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='boolForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='close'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='columnCount'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='columnIndexForName:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='columnIndexIsNull:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='columnIsNull:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='columnNameForIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='columnNameToIndexMap'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='dataForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='dataForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='dataNoCopyForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='dataNoCopyForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='dateForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='dateForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='doubleForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='doubleForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='hasAnotherRow'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='intForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='intForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='kvcMagic:'>
+<arg declared_type='id' name='object' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='longForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='longForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='longLongIntForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='long long' type='q'/>
+</method>
+<method selector='longLongIntForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='long long' type='q'/>
+</method>
+<method selector='next'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='objectForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectForColumnName:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='query'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='resultDict'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='resultSetWithStatement:usingParentDatabase:'>
+<arg declared_type='FMStatement*' name='statement' index='0' type='@'/>
+<arg declared_type='FMDatabase*' name='aDB' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setColumnNameToIndexMap:'>
+<arg declared_type='NSMutableDictionary*' name='columnNameToIndexMap' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setParentDB:'>
+<arg declared_type='FMDatabase*' name='newDb' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQuery:'>
+<arg declared_type='NSString*' name='query' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStatement:'>
+<arg declared_type='FMStatement*' name='statement' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='statement'>
+<retval declared_type='FMStatement*' type='@'/>
+</method>
+<method selector='stringForColumn:'>
+<arg declared_type='NSString*' name='columnName' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='stringForColumnIndex:'>
+<arg declared_type='int' name='columnIdx' index='0' type='i'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='FMStatement'>
+<method selector='close'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='query'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='reset'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQuery:'>
+<arg declared_type='NSString*' name='query' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStatement:'>
+<arg declared_type='sqlite3_stmt*' name='statement' index='0' type='^{sqlite3_stmt=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUseCount:'>
+<arg declared_type='long' name='useCount' index='0' type='l'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='statement'>
+<retval declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+</method>
+<method selector='useCount'>
+<retval declared_type='long' type='l'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='databasePool:shouldAddDatabaseToPool:'>
+<arg declared_type='FMDatabasePool*' name='pool' index='0' type='@'/>
+<arg declared_type='FMDatabase*' name='database' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='FMDatabasePoolDelegate'>
+<method selector='databasePool:shouldAddDatabaseToPool:' type='B16@0:4@8@12'>
+<arg declared_type='FMDatabasePool*' name='pool' index='0' type='@'/>
+<arg declared_type='FMDatabase*' name='database' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>
